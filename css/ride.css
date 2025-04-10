@@ -1,0 +1,240 @@
+/* General Background and Text Styles */
+body {
+    background-color: #2d2b2b;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Video container styling */
+.video-container {
+    position: relative;
+}
+
+/* Section styling */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+    background-color: #0c0c0c;
+}
+
+@media (max-width: 1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 123px 30px;
+    }
+}
+
+/* Form Styling */
+.form-style-10 {
+    width: 90%;
+    /* Increase width of the form */
+    margin: 50px auto;
+    /* Increased margin to give more space around */
+    padding: 40px;
+    background: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(47, 46, 50, 0.7);
+    /* Slightly stronger shadow for depth */
+}
+
+.form-style-10 h1 {
+    background: #800505;
+    padding: 25px 30px 15px 30px;
+    margin: -40px -30px 30px -30px;
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+    font: normal 35px 'Bitter', serif;
+}
+
+.form-style-10 label {
+    display: block;
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.form-style-10 input[type="text"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #4f2742;
+    color: #fff;
+    border: 2px solid #47293a;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-style-10 input[type="text"]:focus,
+.form-style-10 input[type="email"]:focus,
+.form-style-10 input[type="date"]:focus,
+.form-style-10 input[type="time"]:focus,
+.form-style-10 textarea:focus {
+    outline: none;
+    border-color: #0099cc;
+}
+
+/* Submit Button Styling */
+.form-style-10 input[type="submit"] {
+    background: #e50914;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff;
+    font: normal 20px 'Bitter', serif;
+    border: 1px solid #b20710;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.form-style-10 input[type="submit"]:hover {
+    background: #b20710;
+}
+
+/* Section Styling */
+.form-style-10 .section {
+    font: normal 22px 'Bitter', serif;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #bbb;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff5722;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 767.98px) {
+    .form-style-10 {
+        width: 80%;
+        /* Increased width for smaller devices */
+        padding: 25px;
+    }
+
+    .form-style-10 h1 {
+        font-size: 28px;
+    }
+
+    .form-style-10 .section {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .form-style-10 {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-style-10 h1 {
+        font-size: 22px;
+    }
+
+    .form-style-10 .section {
+        font-size: 16px;
+    }
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #ff5722;
+}
+
+/* Mobile Navigation */
+#menu-icon {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        padding: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar li {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .navbar li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+    }
+
+    .close-btn {
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+}

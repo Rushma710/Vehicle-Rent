@@ -1,0 +1,36 @@
+.container {
+    background-color: rgb(229, 239, 212);
+}
+
+.left {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(87, 3, 51);
+}
+
+.right {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(87, 3, 51);
+}
+
+.u {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: oblique;
+    color: rgb(35, 5, 134);
+}
+
+.send-button {
+    flex-basis: 70%;
+    padding: 10px;
+    color: #6d0746;
+    text-align: center;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid #360207;
+}
+
+.send-button {
+    background: #f76d37;
+    border: 3px solid white;
+    color: white;
+}

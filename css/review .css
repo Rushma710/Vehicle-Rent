@@ -1,0 +1,22 @@
+.stars {
+    height: 100px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 10%;
+    box-shadow: 20px 0px 50px rgba(7, 7, 7, 0.4);
+
+}
+
+.swiper-slide {
+    background: linear-gradient(red, pink);
+}
+
+.choose {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #f76d37;
+}
+
+.features {
+    color: rgb(17, 18, 18);
+}

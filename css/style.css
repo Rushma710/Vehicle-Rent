@@ -1,0 +1,314 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* copyright section start */
+
+.copyright_section {
+  width: 100%;
+  float: left;
+  background-color: rgb(244, 63, 93);
+  height: auto;
+}
+
+.copyright_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #f15c5c;
+  text-align: center;
+  margin-left: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.copyright_text a {
+  color: #ea0712;
+}
+
+.copyright_text a:hover {
+  color: #363636;
+}
+
+
+/* copyright section end */
+
+.margin_top90 {
+  margin-top: 90px;
+}
+
+/* From Uiverse.io by virus231 */
+.auth_btn {
+  background: linear-gradient(140.14deg, #460239 15.05%, #d6361f 114.99%) padding-box,
+    linear-gradient(142.51deg, #ff9465 8.65%, #af1905 88.82%) border-box;
+  border-radius: 7px;
+  border: 2px solid transparent;
+
+  text-shadow: 1px 1px 1px #00000040;
+  box-shadow: 8px 8px 20px 0px #45090059;
+
+  padding: 10px 40px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.auth_btn:hover {
+  box-shadow: none;
+  opacity: 90%;
+}
+
+.card-price {
+  background: linear-gradient(140.14deg, #e009b5 15.05%, #97f019 114.99%) padding-box,
+    linear-gradient(142.51deg, #56ee38 8.65%, #defe28 88.82%) border-box;
+  border-radius: 7px;
+  border: 2px solid transparent;
+
+  text-shadow: 1px 1px 1px #00000040;
+  box-shadow: 8px 8px 20px 0px #45090059;
+
+  padding: 10px 40px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-price:hover {
+  box-shadow: none;
+  opacity: 90%;
+  color: #c3f71b;
+}
+
+.model-btn {
+  background: linear-gradient(140.14deg, #7561e7 15.05%, #57e12d 114.99%) padding-box,
+    linear-gradient(142.51deg, #56ee38 8.65%, #c013a3 88.82%) border-box;
+  border-radius: 2px;
+  border: 2px solid transparent;
+
+  text-shadow: 1px 1px 1px #00000040;
+  box-shadow: 8px 8px 20px 0px #45090059;
+
+  padding: 10px 40px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.model-btn:hover {
+  box-shadow: none;
+  opacity: 90%;
+  color: #f71b1b;
+}
+
+/* banner section start */
+
+.banner_section {
+  width: 100%;
+  background-image: url(../images/vehicles.png);
+  height: auto;
+  background-size: cover;
+  padding: 10px 0px 25px 0px;
+  background-repeat: no-repeat;
+}
+
+.banner_title {
+  padding: 100px 0px;
+}
+
+.outstanding_text {
+  font-size: 60px;
+  color: #2e0320;
+  padding-bottom: 0px;
+}
+
+
+
+.there_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #046413;
+  margin: 0px;
+  padding-bottom: 30px;
+}
+
+.spend_text {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #050442;
+}
+
+.services_taital {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7d6b06;
+  margin: 0px;
+  padding-bottom: 30px;
+}
+
+.decorate_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7d6b06;
+  margin: 0px;
+  padding-bottom: 30px;
+}
+
+.about_box {
+  width: 100%;
+  background-color: #f7cbc1;
+  height: auto;
+  background-size: cover;
+  padding: 10px 0px 25px 0px;
+  background-repeat: no-repeat;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 30px;
+  background-color: #edd883;
+  padding: 30px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.form-container-1 {
+  border: 3px solid #37f7c4;
+}
+
+.form-container .form .input {
+  color: #1f1fcd;
+  width: 100%;
+  background-color: rgb(247, 203, 208);
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid transparent;
+}
+
+.form-container .form .input:focus {
+  border-left: 5px solid #41022e;
+}
+
+.form-container .form .textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(247, 209, 209);
+  color: #100132;
+  font-weight: bold;
+  resize: none;
+  max-height: 150px;
+  margin-bottom: 20px;
+  border-left: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+  border-left: 5px solid #131313;
+}
+
+.form-container .form .button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+  flex-basis: 70%;
+  padding: 10px;
+  color: #dc1c1c;
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  border: 3px solid #014e03;
+}
+
+.form-container .form .button-container .send-button:hover {
+  background: #f737b4;
+  border: 3px solid white;
+  color: white;
+}
+
+.form-container .form .button-container .reset-button-container {
+  filter: drop-shadow(1px 1px 0px #da2187);
+  flex-basis: 30%;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: #71e234;
+  font-weight: bold;
+  background: #001925;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button:hover {
+  background: #7dcbf5;
+  color: #001925;
+}
+
+.new_navbar .icon_ho {
+  display: flex !important;
+  justify-content: space-between;
+  font-weight: 500;
+  float: right;
+  text-align: left;
+
+  /* padding: 7px 10px; */
+}
+
+.new_navbar .icon_ho i {
+  font-size: 30px;
+  font-weight: 800;
+  padding: 7px 10px;
+  color: rgb(57, 3, 3);
+  /* padding: 7px 10px; */
+}
+
+.new_navbar .icon_ho i:hover {
+  color: white;
+  /* padding: 7px 10px; */
+}
+
+.booking-form {
+  background-color: #dafa9f;
+}
+
+.model {
+  background-color: #f4e6a2;
+}
+
+.ride {
+  background-color: #c0fded;
+}
+
+.values {
+  background-image: url(../images/gadi.png);
+}
+
+.accordion-item {
+  background-color: #01577b;
+  opacity: 90%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.accordion-body {
+  background-color: #fc5ad9;
+  opacity: 90%;
+  font-weight: 300;
+  font-style: oblique;
+}
