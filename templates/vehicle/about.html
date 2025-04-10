@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">                                            
+    <title>Vehicles Rental</title>
+    <!-- fontawasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- aos css -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+   
+    <!-- style css -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/register.css' %}">
+     <link rel="stylesheet" href="{% static 'css/s.css' %}">
+     <link rel="stylesheet" href="{% static 'css/contactus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/serv.css' %}">
+    <link rel="stylesheet" href="{% static 'css/review.css' %}">
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+    <style>
+      .circle {
+          height: 18px;
+          width: 18px;
+          border-radius: 24px;
+          background-color: #910c79;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1000; /* Ensure the trail is above everything */
+          pointer-events: none; /* Prevent the circles from interfering with mouse events */
+      }
+  </style>
+  
+  <!-- 20 circle elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="container">
+  
+  <!-- Hero Section -->
+  <a href="{% url 'index' %}"><button class="back-button" onclick="window.location.href=''"><img src="{% static 'images/back_button.png' %}" width="50px" height="50px"/></button></a>
+  <section style="background-color: rgb(18, 1, 33);">
+    <h1 style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">About Us</h1>
+    <video autoplay muted loop id="background-video"  data-aos="zoom-in-left"
+    data-aos-duration="1500">
+        <source src="{% static 'images/dark.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+    <!-- Company Overview -->
+    <section id="company-overview" class="company-overview" style="background-color: rgb(26, 1, 49);">
+      <h2 style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">Company Overview</h2>
+      <div class="section-img" data-aos="zoom-out"
+      data-aos-duration="1500">
+        <img
+          src="https://imgs.search.brave.com/cxDCWs1zA6VHwGveT0ZH011wctKwB8Cea4MgWnqGOIo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mZXJyYXJpLWNh/ci1iYWNrZ3JvdW5k/XzY2MzEwMi0zMDIu/anBnP3NpemU9NjI2/JmV4dD1qcGc"
+          alt="Company Overview Image" data-aos="zoom-out"
+          data-aos-duration="1500">
+        />
+      </div>
+      <p style="font-style: italic; font-weight: 700; color: rgb(189, 9, 141);" data-aos="zoom-out"
+      data-aos-duration="1500">
+        Founded in 2023, <span class="highlight"  >Premium Vehicle Rentals</span> is
+        dedicated to providing top-notch cab rental services with a focus on
+        reliability, comfort, and customer satisfaction.
+      </p>
+      <p style="font-style: italic; font-weight: 700; color: rgb(235, 106, 7);">
+        Our mission is to make transportation easy and accessible for
+        everyone, offering a range of services tailored to meet diverse needs.
+      </p>
+    </section>
+    <div class="coffee_section layout_padding" style="background-color: rgb(26, 1, 49);">
+      <div class="container">
+         <div class="row">
+         </div>
+      </div>
+      <div class="coffee_section_2">
+         
+               <div id="main_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                   <div class="carousel-item active">
+                      <div class="container-fluid">
+                         <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="car_img" data-aos="zoom-in-down" data-aos-duration="3000"><img src="{% static 'images/lam.png' %}"></div>
+                              <h3 class="types_text " style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">Lamborgini</h3>
+                              <p class="looking_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">looking at its layout. The point of</p>
+                              <div class="read_bt"><a href="/payment/" >Book Now</a></div>
+                           </div>
+                            <div class="col-lg-3 col-md-6">
+                               <div class="car_img"  data-aos="zoom-in-down" data-aos-duration="3000"><img src="{% static 'images/bike.png' %}"></div>
+                               <h3 class="types_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">BMW</h3>
+                               <p class="looking_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">looking at its layout. The point of</p>
+                               <div class="read_bt"><a href="/payment/">Book Now</a></div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                               <div class="coffee_img bg-image hover-zoom" data-aos="zoom-in-down" data-aos-duration="3000"><img src="{% static 'images/th.png' %}"></div>
+                               <h3 class="types_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">Dukati</h3>
+                               <p class="looking_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">looking at its layout. The point of</p>
+                               <div class="read_bt"><a href="/payment/">Book Now</a></div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                               <div class="car_img" data-aos="zoom-in-down"data-aos-duration="3000" ><img src="{% static 'images/b.png' %}"></div>
+                               <h3 class="types_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">Maruti 123</h3>
+                               <p class="looking_text" style="font-style: italic; font-weight: 700; color: rgb(255, 9, 26);">looking at its layout. The point of</p>
+                               <div class="read_bt"><a href="/payment/">Book Now</a></div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+               
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+    <!-- Mission and Vision -->
+    <section id="mission-vision" class="mission-vision">
+      <h2 style="font-style: italic; font-weight: 700; color: rgb(255, 222, 9);">Mission and Vision</h2>
+      <div class="section-img" data-aos="fade-up"
+      data-aos-anchor-placement="top-center"data-aos-duration="3000">
+        <img
+          src="https://imgs.search.brave.com/2CAFCbM6U5I6Q03dK-bC8qqqyb_mjrDxo4YGu4-zCnk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzLzMxOC9pbi10/aGUtY2FyLTEtMTQ5/NTA3MC5qcGc_Zm10"
+          alt="Mission and Vision Image"
+        />
+      </div>
+      <p style="font-style: italic; font-weight: 700; color: rgb(28, 94, 4);"data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+        <strong>Mission:</strong> To provide reliable and affordable vehicle
+        rental services while ensuring exceptional customer experience.
+      </p>
+      <p style="font-style: italic; font-weight: 700; color: rgb(8, 81, 4);">
+        <strong>Vision:</strong> To be the leading cab rental company known
+        for innovation, sustainability, and outstanding service.
+      </p>
+    </section>
+    <!-- Values and Principles -->
+    <section id="values-principles" class="values-principles"  data-aos="fade-up-left" data-aos-anchor-placement="linear-gradient" data-aos-duration="3000">
+      <h2 style="font-style: italic; font-weight: 700; color: rgb(255, 218, 9);" >Values and Principles</h2>
+      <ul>
+        <li style="font-style: italic; font-weight: 700; color: rgb(128, 11, 100);">
+          <strong >Customer First:</strong> We prioritize our customers' needs
+          and strive to exceed their expectations.
+        </li>
+        <li style="font-style: italic; font-weight: 700; color: rgb(60, 189, 20);">
+          <strong>Integrity:</strong> We operate with honesty and transparency
+          in all our dealings.
+        </li>
+        <li style="font-style: italic; font-weight: 700; color: rgb(180, 26, 118);">
+          <strong>Safety:</strong> We ensure the highest safety standards for
+          our customers and drivers.
+        </li>
+        <li style="font-style: italic; font-weight: 700; color: rgb(113, 9, 94);">
+          <strong>Innovation:</strong> We continuously seek innovative
+          solutions to enhance our services.
+        </li>
+        <li style="font-style: italic; font-weight: 700; color: rgb(8, 84, 184);">
+          <strong>Sustainability:</strong> We are committed to sustainable
+          practices and reducing our environmental impact.
+        </li>
+      </ul>
+    </section>
+  </div>
+<!-- aos js code -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/js/intlTelInput.min.js" integrity="sha512-IkaM8IicdlJR0eLhPoAHBeDXxQ8QTjVfo7O9hwowr8gTmxZOlV0Z51HFYIDmftcLmdejUlGam6uYVU3k7xP/4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  AOS.init();
+</script>
+  
+  <footer>
+   
+    
+  <script src="{% static 'js/script.js' %}"></script>
+    <script>
+     let lastScrollTop = 0;
+      const footer = document.querySelector("footer");
+
+      window.addEventListener("scroll", function() {
+          let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (currentScroll > lastScrollTop) {
+              // Scrolling down - footer should appear smoothly
+              footer.style.transform = "translateY(0)";
+          } else {
+              // Scrolling up - hide the footer smoothly
+              footer.style.transform = "translateY(100%)";
+          }
+
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+  </script>
+  </footer>
+  <div id="topbtn" class="topbtn">
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+</div>
+<script>
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+  
+  // Assign initial positions to the circles
+  circles.forEach(function (circle) {
+      circle.x = 0;
+      circle.y = 0;
+  });
+
+  window.addEventListener("mousemove", function (e) {
+      // Use pageX and pageY to account for scroll distance
+      coords.x = e.pageX;
+      coords.y = e.pageY;
+  });
+
+  function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+          circle.style.scale = (circles.length - index) / circles.length;
+
+          circle.x = x;
+          circle.y = y;
+
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+</script>
+<script>
+window.embeddedChatbotConfig = {
+chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+domain="www.chatbase.co"
+defer>
+  </script>
+<body>
+
+</body>
+</html>
+    
+    
+   

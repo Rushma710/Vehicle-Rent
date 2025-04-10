@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}"/>
+</head>
+<body>
+
+    
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="container">
+    <header>
+        <h1 class="u">YOU CAN PAY HERE!!!</h1>
+        <div class="video" >
+            <video autoplay muted loop id="background-video" style="height: 100vh; width:fit-content;">
+              <source src="{% static 'images/payment.mp4' %}"  type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        <div class="container">
+            <div class="left">
+                <h3>
+                    BILLING ADDRESS
+                </h3>
+            <form name="form" action="/payment/" method="POST" class="f" >
+                {% csrf_token %}
+                Full name
+                <input type="text" name="fname" placeholder="Enter Your full name">
+                Email
+                <input type="text" name="email" id="" placeholder="Enter Your Email">
+                Address
+                <input type="text" name="address" id="" placeholder="Enter Your Address">
+                <div id="Zip">
+                    <label for="">
+                        City
+                        <select>
+                            <option value="">Choose City...</option>
+                            <option value="Jhapa">Jhapa</option>
+                            <option value="Dolakha">Dolakha</option>
+                            <option value="Surkhet">Surkhet</option>
+                            <option value="Bhaktapur">Bhaktapur</option>
+                            <option value="Kathmandu">Kathmandu</option>
+                        </select>
+                    </label>
+                </div>
+            </form>
+            </div>
+            <div class="right">
+                <h2>PAYMENT CARD</h2>
+                <form action="">
+                    Accepted Card <br>
+                    <a href=""><img src="{% static 'images/esewa.png' %}" alt="" width="100"></a>
+                    <img src="{% static 'images/g.png' %}" alt="" width="100">
+                    <img src="{% static 'images/pay.png' %}" alt="" width="100">
+<br>
+<br>  
+    <div id="Zip">
+        <label for="">
+            Amount
+            <input type="number" name="money" id="" placeholder="Enter Payment Money">
+        </label>
+    <div class="form-group">
+        <label for="pickupDate">Pickup Date</label>
+        <input type="date" name="pick" id="pickupDate">
+    </div>
+    <div class="form-group">
+        <label for="dropoffDate">Drop-off Date</label>
+        <input type="date" name="drop" id="dropoffDate">
+    </div>
+  </div>    
+</form>
+    <button type="submit " class="">PROCEED TO CHECKOUT <img src="{% static 'images/arrow.png' %}" style="width: 20px;" alt=""></button>
+        </div>
+        <script>
+            const coords = { x: 0, y: 0 };
+            const circles = document.querySelectorAll(".circle");
+            
+            // Assign initial positions to the circles
+            circles.forEach(function (circle) {
+                circle.x = 0;
+                circle.y = 0;
+            });
+    
+            window.addEventListener("mousemove", function (e) {
+                // Use pageX and pageY to account for scroll distance
+                coords.x = e.pageX;
+                coords.y = e.pageY;
+            });
+    
+            function animateCircles() {
+                let x = coords.x;
+                let y = coords.y;
+    
+                circles.forEach(function (circle, index) {
+                    circle.style.left = x - 12 + "px";
+                    circle.style.top = y - 12 + "px";
+                    circle.style.scale = (circles.length - index) / circles.length;
+    
+                    circle.x = x;
+                    circle.y = y;
+    
+                    const nextCircle = circles[index + 1] || circles[0];
+                    x += (nextCircle.x - x) * 0.3;
+                    y += (nextCircle.y - y) * 0.3;
+                });
+    
+                requestAnimationFrame(animateCircles);
+            }
+    
+            animateCircles();
+        </script>
+        </header>
+        </body>
+</html>

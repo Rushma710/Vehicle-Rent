@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
+    <title>Vehiclesrental Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/privacy.css' %}">
+    <style>
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-items {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .nav-items a {
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-items a:hover {
+            color: #6d28d9;
+        }
+
+        .navbar ul li:hover a {
+    background-color: #555;
+    transform: scale(1.2); /* Popup effect */
+}
+.circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #8e0d4d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00aced;
+    top: 100%;
+    left: 0;
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .text-lg {
+            padding-left: 10px;
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(90deg, #6d28d9 0%, #4f46e5 100%);
+        }
+
+        .rating-star {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <a href="{% url 'index' %}"><button class="back-button" onclick="window.location.href=''"><img src="{% static 'images/back_button.png' %}" width="50px" height="50px"/></button></a>
+
+    <section class="policy" style="background-color: #04000a;">
+        <div class="policy-container" style="background-color: #35022b;" >
+            <h2 style="color: #0fcee3; font-weight: 800;">Vehicle Rental Policy And Privacy</h2>
+            <video autoplay muted loop id="background-video">
+                <source src="{% static 'images/red.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="policy-content" style="background-color: #380141;" >
+                <h3>1. General Information</h3>
+                <p>By renting a vehicle with us, you agree to the terms outlined in this policy. Please ensure you understand all guidelines, fees, and conditions before proceeding with your reservation.</p>
+
+                <h3>2. Eligibility</h3>
+                <p>The renter must be at least 21 years old with a valid driver's license. International drivers must have an International Driving Permit.</p>
+
+                <h3>3. Rental Period</h3>
+                <p>The rental period begins when you pick up the vehicle and ends when you return it. Additional charges may apply for any late returns.</p>
+                 
+                <h3>4. Fuel Policy</h3>
+                <p>The vehicle should be returned with the same fuel level as when rented. If not, a refueling fee will be applied to your bill.</p>
+
+                <h3>5. Insurance Coverage</h3>
+                <p>Basic insurance is included, but we highly recommend additional coverage for comprehensive protection. Damage to the vehicle will be charged if caused by the renter.</p>
+
+                <h3>6. Security Deposit</h3>
+                <p>A refundable security deposit will be charged at the time of booking. The deposit will be returned to you if the vehicle is returned in the same condition as when it was rented.</p>
+
+                <h3>7. Prohibited Uses</h3>
+                <p>The rental vehicle cannot be used for illegal activities, racing, or off-road driving. Any violations will result in immediate termination of the rental agreement.</p>
+
+                <h3>8. Vehicle Theft</h3>
+                <p>If the vehicle is stolen, you are required to report it immediately to the police and our rental office. Failure to report may result in full liability for the vehicle's replacement cost.</p>
+
+                <h3>9. Cancellations and Refunds</h3>
+                <p>To cancel your reservation, you must provide 48 hours' notice for a full refund. Cancellations made within 48 hours are subject to a cancellation fee.</p>
+
+                <h3>17. Contact Us</h3>
+                <p>If you have any questions about this privacy policy, please contact us at <a href="dahalrushma38@gmail.com">dahalrushma38@gmail.com<a>.</p>
+                        
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+       
+       <script>
+        // JavaScript to handle modal functionality -->
+       document.getElementById('reviewButton').addEventListener('click', function () {
+           document.getElementById('reviewModal').classList.remove('hidden');
+       });
+ 
+       document.getElementById('closeModal').addEventListener('click', function () {
+           document.getElementById('reviewModal').classList.add('hidden');
+       });
+ 
+       document.getElementById('cancelButton').addEventListener('click', function () {
+           document.getElementById('reviewModal').classList.add('hidden');
+       });
+ 
+       // Optionally, handle form submission here
+       document.querySelector('form').addEventListener('submit', function (e) {
+           e.preventDefault();
+           // Process form data and close modal
+           document.getElementById('reviewModal').classList.add('hidden');
+           alert('Thank you for your review!');
+       });
+   </script>
+    <script>
+       const coords = { x: 0, y: 0 };
+       const circles = document.querySelectorAll(".circle");
+       
+       // Assign initial positions to the circles
+       circles.forEach(function (circle) {
+           circle.x = 0;
+           circle.y = 0;
+       });
+ 
+       window.addEventListener("mousemove", function (e) {
+           // Use pageX and pageY to account for scroll distance
+           coords.x = e.pageX;
+           coords.y = e.pageY;
+       });
+ 
+       function animateCircles() {
+           let x = coords.x;
+           let y = coords.y;
+ 
+           circles.forEach(function (circle, index) {
+               circle.style.left = x - 12 + "px";
+               circle.style.top = y - 12 + "px";
+               circle.style.scale = (circles.length - index) / circles.length;
+ 
+               circle.x = x;
+               circle.y = y;
+ 
+               const nextCircle = circles[index + 1] || circles[0];
+               x += (nextCircle.x - x) * 0.3;
+               y += (nextCircle.y - y) * 0.3;
+           });
+ 
+           requestAnimationFrame(animateCircles);
+       }
+ 
+       animateCircles();
+   </script>
+   <script>
+       window.embeddedChatbotConfig = {
+       chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+       domain: "www.chatbase.co"
+       }
+       </script>
+       <script
+       src="https://www.chatbase.co/embed.min.js"
+       chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+       domain="www.chatbase.co"
+       defer>
+       </script>
+ 
+ 
+ </body>
+ 
+ </html>

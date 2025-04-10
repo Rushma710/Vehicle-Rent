@@ -1,0 +1,77 @@
+{% extends "base1.html" %}
+{% load static %}
+{% block title %}
+  ~Form
+{% endblock title %}
+
+{% block content1 %}
+  <div class="container">
+    <form method="POST" action="/add/" enctype="multipart/form-data">
+      {% if messages %}
+        <div id="abc">
+        {% for message in messages %}
+          <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{message}}.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+        </div>
+      {% endif %}
+      {% csrf_token %}
+
+      <!-- Name Field -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter your name" id="name" required>
+      </div>
+
+      <!-- Age Field -->
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" name="age" placeholder="Enter your age" id="age" min="0" required>
+      </div>
+
+      <!-- Email Field -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <!-- Vehicle Name Field -->
+      <div class="mb-3">
+        <label for="vname" class="form-label">Vehicle Name</label>
+        <input type="text" class="form-control" name="vname" placeholder="Enter vehicle name" id="vname" required>
+      </div>
+
+      <!-- Description Field -->
+      <div class="form-floating mb-3">
+        <textarea name="description" class="form-control" placeholder="Leave a message here" id="floatingTextarea" required></textarea>
+        <label for="floatingTextarea">Descriptions</label>
+      </div>
+
+      <!-- Vehicle Image Field -->
+      <div class="mb-3">
+        <label for="image" class="form-label">Vehicle Image</label>
+        <input type="file" class="form-control" name="image" placeholder="Enter vehicle image" id="image" accept="image/*" required>
+      </div>
+
+      <!-- Terms Checkbox -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+        <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script>
+      setTimeout(function(){
+          const abc = document.querySelector('#abc');
+          if (abc) {
+              abc.style.display = 'none';
+          }
+      }, 5000);
+    </script>
+  </div>
+{% endblock content1 %}

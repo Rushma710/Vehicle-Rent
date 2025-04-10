@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/logo1.png" type="image/png">
+  <title>Vehiclesrental Reviews</title>
+  <link rel="stylesheet" href="{% static 'css/privacy.css' %}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 80px;
+      }
+
+      .nav-items {
+          flex-grow: 1;
+          text-align: center;
+      }
+
+      .nav-items a {
+          margin: 0 1rem;
+          transition: color 0.3s ease;
+      }
+
+      .nav-items a:hover {
+          color: #6d28d9;
+      }
+
+      .navbar ul li:hover a {
+  background-color: #555;
+  transform: scale(1.2); /* Popup effect */
+}
+.circle {
+          height: 18px;
+          width: 18px;
+          border-radius: 24px;
+          background-color: #8e0d4d;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1000; /* Ensure the trail is above everything */
+          pointer-events: none; /* Prevent the circles from interfering with mouse events */
+      }
+
+.navbar ul li:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #00aced;
+  top: 100%;
+  left: 0;
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+      .card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .logo {
+          height: 40px;
+          width: auto;
+      }
+
+      .text-lg {
+          padding-left: 10px;
+      }
+
+      .bg-gradient-to-r {
+          background: linear-gradient(90deg, #6d28d9 0%, #4f46e5 100%);
+      }
+
+      .rating-star {
+          color: #fbbf24;
+      }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <!-- 20 circle elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+
+
+  <!-- Hero Section -->
+    <a href="{% url 'index' %}"><button class="back-button" onclick="window.location.href=''"><img src="{% static 'images/back_button.png' %}" width="50px" height="50px"/></button></a>
+
+    <title>Vehicle Rental Risks and Threats</title>
+
+</head>
+<body>
+  
+    <section class="content" style="background: linear-gradient(rgb(18, 1, 63), rgb(230, 109, 129));">
+        <h2 style="color: #fbbf24;">Risks and Threats in Vehicle Rental</h2>
+        <video autoplay muted loop id="background-video">
+          <source src="{% static 'images/gadi.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+        <div class="risk-list">
+            <div class="risk-item"  style="background-color: rgb(41, 18, 1);">
+                <h3>Accidents and Damage</h3>
+                <p>Renters might be involved in accidents that can damage the vehicle. It's important to have insurance coverage to mitigate financial risks.</p>
+            </div>
+            <div class="risk-item" style="background-color: rgb(41, 18, 1);">
+                <h3>Uninsured Drivers</h3>
+                <p>If the renter doesn't have proper insurance or doesn't purchase the rental company's coverage, they may face significant liabilities in case of an accident.</p>
+            </div>
+            <div class="risk-item" style="background-color: rgb(41, 18, 1);">
+                <h3>Unauthorized Usage</h3>
+                <p>The vehicle may be used by unauthorized individuals, which can lead to legal issues or theft.</p>
+            </div>
+            <div class="risk-item" style="background-color: rgb(41, 18, 1);">
+                <h3>Vehicle Theft</h3>
+                <p>The risk of the rental vehicle being stolen is always present. It's advisable to take precautions such as using anti-theft devices and ensuring the vehicle is parked in secure locations.</p>
+            </div>
+            <div class="risk-item" style="background-color: rgb(41, 18, 1);">
+                <h3>Breakdowns and Maintenance</h3>
+                <p>Unexpected vehicle breakdowns may occur. Rental companies should ensure regular maintenance to minimize this risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vehicle Rental Service By Rushma . All rights reserved.</p>
+    </footer>
+    <script>
+    <!-- // JavaScript to handle modal functionality -->
+    document.getElementById('reviewButton').addEventListener('click', function () {
+        document.getElementById('reviewModal').classList.remove('hidden');
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function () {
+        document.getElementById('reviewModal').classList.add('hidden');
+    });
+
+    document.getElementById('cancelButton').addEventListener('click', function () {
+        document.getElementById('reviewModal').classList.add('hidden');
+    });
+
+    // Optionally, handle form submission here
+    document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Process form data and close modal
+        document.getElementById('reviewModal').classList.add('hidden');
+        alert('Thank you for your review!');
+    });
+</script>
+ <script>
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+    
+    // Assign initial positions to the circles
+    circles.forEach(function (circle) {
+        circle.x = 0;
+        circle.y = 0;
+    });
+
+    window.addEventListener("mousemove", function (e) {
+        // Use pageX and pageY to account for scroll distance
+        coords.x = e.pageX;
+        coords.y = e.pageY;
+    });
+
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
+            circle.style.scale = (circles.length - index) / circles.length;
+
+            circle.x = x;
+            circle.y = y;
+
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
+
+        requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+</script>
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+</body>
+</html>

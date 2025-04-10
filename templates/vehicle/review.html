@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
+    <title>Vehiclesrental Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-items {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .nav-items a {
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-items a:hover {
+            color: #6d28d9;
+        }
+
+        .navbar ul li:hover a {
+    background-color: #555;
+    transform: scale(1.2); /* Popup effect */
+}
+.circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #8e0d4d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00aced;
+    top: 100%;
+    left: 0;
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .text-lg {
+            padding-left: 10px;
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(90deg, #6d28d9 0%, #4f46e5 100%);
+        }
+
+        .rating-star {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
+
+    <!-- Hero Section -->
+      <a href="{% url 'index' %}"><button class="back-button" onclick="window.location.href=''"><img src="{% static 'images/back_button.png' %}" width="50px" height="50px"/></button></a>
+    <section class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-2">Vehiclesrental Reviews</h1>
+            <p class="text-lg mb-6">Read what our customers have to say about our car,bikes rental service!</p>
+            <button id="reviewButton" class="bg-white text-purple-800 px-4 py-2 rounded shadow hover:bg-gray-200">Leave a Review</button>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="container mx-auto px-4 py-16" style="background-color: #813feb;">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review Cards -->
+            <div class="bg-white p-6 rounded-lg shadow-lg card"  style="background-color: #4cf9f9;">
+                <div class="flex items-center mb-4" >
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/v.png' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">John rao</p>
+                        <p class="text-gray-600">March 25, 2024</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">The car rental service was excellent! The car was in perfect condition, and the process was smooth and hassle-free.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card"  style="background-color: #4cf9f9;">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/rev1.jpg' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">Jane Smith</p>
+                        <p class="text-gray-600">April 10, 2024</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">Great service and friendly staff! I will definitely rent a car from Cabrental again in the future.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card"  style="background-color: #4cf9f9;">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/si.jpeg' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">Mark Wilson</p>
+                        <p class="text-gray-600">May 5, 2024</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">I had an amazing experience with Cabrental. The car was clean and the booking process was seamless.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card"  style="background-color: #7ae947;">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/rev4.jpeg' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">Sawru Dahal</p>
+                        <p class="text-gray-600">March 14, 2025</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">I love the convenience of renting a car from Vehiclesrental. Their service is always reliable and efficient.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card" style="background-color: #7ae947;">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/rev2.jpg' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">Chris </p>
+                        <p class="text-gray-600">July 20, 2024</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">Cabrental has been my go-to car rental service for years. They always provide top-notch service and quality cars.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card" style="background-color: #78e240;">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="{% static 'images/rev3.jpg' %}" alt="User Avatar">
+                    <div>
+                        <p class="text-xl font-bold">Jeena Poudel</p>
+                        <p class="text-gray-600">August 15, 2025</p>
+                    </div>
+                </div>
+                <p class="text-gray-800 mb-4">The customer service at rental is outstanding! They go above and beyond to ensure a great experience.</p>
+                <div class="text-yellow-500">
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Form Modal -->
+    <div id="reviewModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-4 sm:p-8 w-full max-w-lg m-4 sm:m-8 shadow-lg transition-transform duration-300 scale-95 hover:scale-100">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-800">Leave a Review</h2>
+                <button id="closeModal" class="text-gray-600 hover:text-gray-900 text-3xl transition-transform duration-200 transform hover:scale-110">&times;</button>
+            </div>
+            <form method="POST" style=" box-sizing: content-box;">
+                {% csrf_token %}
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="" disabled selected>Select a rating</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="review_text">Review:</label>
+                    <textarea id="review_text" name="review_text" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        // JavaScript to handle modal functionality
+        document.getElementById('reviewButton').addEventListener('click', function () {
+            document.getElementById('reviewModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function () {
+            document.getElementById('reviewModal').classList.add('hidden');
+        });
+
+        document.getElementById('cancelButton').addEventListener('click', function () {
+            document.getElementById('reviewModal').classList.add('hidden');
+        });
+
+        // Optionally, handle form submission here
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Process form data and close modal
+            document.getElementById('reviewModal').classList.add('hidden');
+            alert('Thank you for your review!');
+        });
+    </script>
+     <script>
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+        
+        // Assign initial positions to the circles
+        circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            // Use pageX and pageY to account for scroll distance
+            coords.x = e.pageX;
+            coords.y = e.pageY;
+        });
+
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+
+
+</body>
+
+</html>

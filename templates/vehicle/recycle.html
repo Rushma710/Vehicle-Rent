@@ -1,0 +1,88 @@
+{% extends "base1.html" %}
+{% block title %}
+  ~Recycle
+{% endblock title %}
+{% block content1 %}
+<h1 class="text-center alert alert-success">Deleted Information</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-7 mx-auto alert alert-success">
+            <!-- Table -->
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Vehicle Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Descriptions</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.age }}</td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.vname }}</td> <!-- Assuming 'vname' is the vehicle name -->
+                        <td>{{ i.category }}</td>
+                        <td>
+                            <!-- Display Image if available -->
+                            {% if i.image %}
+                                <img src="{{ i.image.url }}" alt="{{ i.name }}" style="width: 50px; height: 50px;">
+                            {% else %}
+                                No Image
+                            {% endif %}
+                        </td>
+                        <td>{{ i.description }}</td>
+                        <td>
+                            <!-- Button to trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#{{ i.id }}">
+                                <i class="fa-solid fa-trash-arrow-up"></i> Restore
+                            </button>
+
+                            <!-- Modal for restoring the item -->
+                            <div class="modal fade" id="{{ i.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel">Restore Information</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Do you want to restore this information for {{ i.name }}?
+                                        </div>
+                                        <form method="post" action="{% url 'restore' i.id %}">
+                                            {% csrf_token %}
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Restore</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const myModal = document.getElementById('myModal');
+    const myInput = document.getElementById('myInput');
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus();
+    });
+</script>
+
+{% endblock content1 %}

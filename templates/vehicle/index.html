@@ -1,0 +1,623 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <!-- banner section start -->
+  <div class="banner_section layout_padding"  >
+    <div class="container" style="color: rgb(251, 212, 161);">
+       <div id="main_slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+             <div class="carousel-item active">
+                <div class="row">
+                   <div class="col-sm-6">
+  
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="banner_title">
+                         <h1 class="outstanding_text" style="color: rgb(49, 1, 1);"><b style="color: #451908;">VE</b>HICLES</h1>
+                         <h1 class="spend_text"  data-aos="zoom-in" data-aos-duration="4000">Spend Best <br> Time With Us</h1>
+                         <p class="there_text" data-aos="zoom-out" data-aos-duration="4000" >
+                            We at <b style="color: #c54b04;">Ve</b>hicles are a machine, usually with wheels and an engine, used for transporting people or goods, especially on land: <br> A truck driver died last night when his vehicle overturned. Road vehicles include cars, buses, and trucks
+                            Come experience the magic of oue vehicles!
+                         </p>
+                         <div class="learnmore_bt" ><a href="">LEARN MORE</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+  
+          </div>
+          <div class="sliders-bottom"data-aos="flip-left" data-aos-duration="3000">
+             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+             </a>
+             <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+             </a>
+          </div>
+       </div>
+    </div>
+  </div>
+  <!-- banner section end -->
+
+ <a href="{% url 'add' %}"><p class="text-center text-bolder decorate_text">You Can Rent Here The Vehicle You Want!!</p></a>
+
+  <!-- Models -->
+   <!-- for car -->
+
+   <div class="model">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 offset-md-1">
+         <div class="titlepage">
+          <h2>Premium Vehicles Rental <span>In Here</span></h2>
+          <p>A vehicle model is a specific name given to a car or truck by the manufacturer. The model is part of a range of similar vehicles that share a design. </p>
+        </div> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="black_bg">
+          <div class="row d_flex">
+            <div class="col-md-4">
+              <div class="models_box">
+                <figure><img src="{% static 'images/ford.jpeg' %}" alt=""></figure>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="models_box"data-aos="fade-right" data-aos-duration="5000">
+                <h3>Ford Mustang</h3>
+                <p>The namesake of the "pony car" automobile segment, the Mustang was developed as a highly styled line of sporty coupes and convertibles derived from existing model lines, initially distinguished by "long hood, short deck" proportions.</p>
+                <button class="card-price">Rs 10000 for 2 days</button>
+                <a href="/payment/"><button class="card-price">Book Now</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="black_bg">
+          <div class="row d_flex">
+            <div class="col-md-4">
+              <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                <figure><img src="{% static 'images/toyota.jpeg' %}" alt=""></figure>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                <h3>Toyota 4Runner</h3>
+                <p>Its multimode 4WD system, high ground clearance and special TRD features make it capable of taking on rocky trails. If that's important to you, then the 4Runner's otherwise mediocre performance will be more or less insignificant.</p>
+                <button class="card-price">Rs 9000 for 2 days</button>
+                <a href="/payment/"><button class="card-price">Book Now</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="black_bg">
+          <div class="row d_flex"></div>
+          <div class="col-md-4">
+            <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+              <figure><img src="{% static 'images/h.jpeg' %}" alt=""></figure>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="models_box"data-aos="fade-right" data-aos-duration="5000">
+              <h3>Honda CR-V</h3>
+              <p>The Honda CR-V (also sold as the Honda Breeze in China since 2019) is a compact crossover SUV manufactured by Japanese automaker Honda since 1995. Initial models of the CR-V were built using the same platform as the Civic</p>
+            <button class="card-price">Rs11000 for 2 days </button>
+            <a href="/payment/"><button class="card-price">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <!-- car section end -->
+    <!-- bike section start -->
+      <div class="container">
+        <div class="row">
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="black_bg">
+            <div class="row d_flex">
+              <div class="col-md-4">
+                <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                  <figure><img src="{% static 'images/duke.jpeg' %}" alt=""></figure>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="models_box"data-aos="fade-right" data-aos-duration="5000">
+                  <h3>KTM 390 Enduro R</h3>
+                  <p>The KTM 390 Enduro R is a dual-sport motorcycle designed for off-road riding, featuring a 399cc liquid-cooled single-cylinder engine, a lightweight steel trellis frame, long-travel WP Apex suspension, a 9-liter fuel tank, and aggressive off-road-focused bodywork, making it suitable for both on-road commuting and tackling challenging terrain; it shares many engine components with the KTM Duke 390 and 390 Adventure, but with specific adjustments for off-road performance</p>
+                  <button class="card-price">Rs 3000 for 2 days</button>
+                  <a href="/payment/"><button class="card-price">Book Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="black_bg">
+            <div class="row d_flex">
+              <div class="col-md-4">
+                <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                  <figure><img src="{% static 'images/royal.jpeg' %}" alt=""></figure>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                  <h3>Royal Enfield Classic 650</h3>
+                  <p>Royal Enfield Classic 650. Twice the character. Twice the craftsmanship. All the unmistakable hallmarks of a Classic, now powered by the acclaimed 650 Twin.</p>
+                  <button class="card-price">Rs 2500 for 2 days</button>
+                  <a href="/payment/"><button class="card-price">Book Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="black_bg">
+            <div class="row d_flex"></div>
+            <div class="col-md-6">
+              <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                <figure><img src="{% static 'images/honda.jpeg' %}" alt=""></figure>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="models_box" data-aos="fade-right" data-aos-duration="5000">
+                <h3>Bajaj Chetak 3503</h3>
+                <p>Similar to the 3502, the Chetak 3503 also skips on the onboard charger. All said, what's common on the 35 series is the 3.5kWh battery that claims to offer about 153km range (IDC figures) and a top speed of 73kmph.</p>
+                <button class="card-price">Rs 4000 for 2 days</button> 
+                <a href="/payment/"><button class="card-price">Book Now</button></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <!-- bike section end -->
+      <!-- models sec end -->
+       <!-- about section start -->
+        <div class="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="titlepage">
+                  <h2>About <span class="red">US</span></h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="about_box">
+                  <p>Our vehicle rental center provides a diverse fleet of well-maintained cars, jeeps, and vans for rent, catering to all your transportation needs in [location] - whether it's a quick city tour, airport transfers, multi-day expeditions, or special events, ensuring a seamless and comfortable travel experience with our reliable vehicles and professional customer service. </p>
+                   <a class="read_more" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Values and Principles -->
+      <section id="values-principles" class="values"data-aos="zoom-in" data-aos-duration="3000">
+        <h2>Values and Principles</h2>
+        <ul>
+          <li>
+            <strong>Customer First:</strong> We prioritize our customers' needs
+            and strive to exceed their expectations.
+          </li>
+          <li>
+            <strong>Integrity:</strong> We operate with honesty and transparency
+            in all our dealings.
+          </li>
+          <li>
+            <strong>Safety:</strong> We ensure the highest safety standards for
+            our customers and drivers.
+          </li>
+          <li>
+            <strong>Innovation:</strong> We continuously seek innovative
+            solutions to enhance our services.
+          </li>
+          <li>
+            <strong>Sustainability:</strong> We are committed to sustainable
+            practices and reducing our environmental impact.
+          </li>
+        </ul>
+      </section>
+    </div>
+        <!-- end about -->
+         <!-- Ride-->
+    <section class="ride" id="ride" >
+      <div class="heading">
+          <span>How It Works</span>
+          <h1>Rent <i class='bx bx-taxi'></i> in 2 Easy Steps</h1>
+      </div><br>
+      
+      <div class="ride-container">
+          <i class='bxs-calendar'><img class="icon" src="{% static 'images/timetable.png' %}" alt="map"></i>
+          <h2>Travelling Date</h2>
+          <p>Select the date of your journey</p>
+      </div>
+      <div class="ride-container">
+          <i class=' bx-time'><img class="icon" src="{% static 'images/alarm-clock.png' %}" alt="map"></i>
+          <h2>Depart. Time</h2>
+          <p>Select the exact time of your booking</p>
+      </div>
+  </section>
+   <!-- services sec start -->
+   <div class="services_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="services_taital" data-aos="fade-up-left" data-aos-duration="5000">Our Services</h1>
+          <p>Why we do rent much vehicle?</p>
+          <p>We are providing vehicle at affordable price!</p>
+          <p>We do have lastest model!!</p>
+        </div>
+      </div>
+      <div class="services_section_2">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 col-md-4">
+            <div class="box_main active" data-aos="zoom-out" data-aos-duration="10000">
+              <div class="house_icon" >
+                <img src="{% static 'images/r.png' %}" alt="">
+                <img src="" alt="">
+              </div>
+              <h3 class="decorate_text">Affordable Price</h3>
+              <p class="tation_text">Comparison shop between brands (the discount ones aren't always cheapest) Despite names like Dollar and Budget, those stereotypically-discount bands aren't necessarily the cheapest. NerdWallet's 2025 rental car study found that Thrifty, Hertz and Enterprise Rent-A-Car ranked among the cheapest rental car companies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- services section end -->
+      <div class="container" style="background:linear-gradient(rgb(248, 170, 187),rgb(215, 249, 136)) ;" data-aos="zoom-in-left" data-aos-duration="10000">
+          <div class="header">
+              <h2 class="choose">Why Choose Us</h2>
+              <h1>Best valued deals you will ever find</h1>
+              <p>Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to providing you
+                  with the best value for your money, so you can enjoy top-quality services and products without
+                  breaking the bank. Our deals are designed to give you the ultimate renting experience, so don't miss
+                  out on your chance to save big.</p>
+
+          </div>
+          <div class="features">
+              <div class="feature">
+                  <img src="{% static 'images/download.png' %}" alt="Cross Country Drive">
+                  <h3>Cross Country Drive</h3>
+                  <p>Take your driving experience to the next level with our top-notch vehicles for your cross-country
+                      adventures.</p>
+              </div>
+              <div class="feature">
+                  <img src="{% static 'images/download 2.png' %}" alt="All Inclusive Pricing">
+                  <h3>All Inclusive Pricing</h3>
+                  <p>Get everything you need in one convenient, transparent price with our all-inclusive pricing
+                      policy.</p>
+              </div>
+              <div class="feature">
+                  <img src="{% static 'images/download 2.png' %}" alt="No Hidden Charges">
+                  <h3>No Hidden Charges</h3>
+                  <p>Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest
+                      pricing.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+<!-- Rivew section start -->
+<section class="review" id="review" style="background:linear-gradient(rgb(236, 115, 115),rgb(173, 248, 199)) ;">
+
+  <h1 class="heading" > Customer Reviews </h1>
+
+  <div class="swiper review-slider" data-aos="zoom-in">
+
+      <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <img src="{% static 'images/rev1.jpg' %}" width="100px" alt="">
+                  <h3>Noah Lee</h3>
+                  <p>I recently used Cabrental for a weekend trip and was thoroughly impressed. The booking process
+                      was seamless, and the website was intuitive and easy to navigate. The car was clean and in
+                      excellent condition, and the pick-up and drop-off process was quick and hassle-free. The
+                      customer service was exceptional—friendly and helpful staff made the experience even better.
+                      Highly recommended!</p>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+
+          <div class="swiper-slide">
+              <img src="{% static 'images/rev4.jpeg' %}" width="100px" alt="">
+              <h3>Sophia Rossi</h3>
+              <p>I recently used Cabrental for a weekend getaway, and I couldn't be happier with the experience.
+                      The website is user-friendly, and I found the perfect car within minutes.</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+          </div>
+
+          <div class="swiper-slide">
+              <img src="{% static 'images/rev3.jpg' %}" width="100px" alt="">
+              <h3>Olivia Davis</h3>
+              <p>The booking process was straightforward, and I received a confirmation email immediately. When I
+                      arrived at the pick-up location, the staff was friendly and efficient. The car was clean,
+                      well-maintained, and exactly as described on the website.</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-full-alt"></i>
+              </div>
+          </div>
+
+          <div class="swiper-slide">
+              <img src="{% static 'images/rev2.jpg' %}" width="100px" alt="">
+              <h3>Rohan Gupta</h3>
+              <p>Returning the car was just as easy, and there were no hidden fees or unexpected charges. I will
+                      definitely be using Cabrental again for my future trips. Highly recommended!</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+
+          </div>
+      </div>
+  </section>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section style="background-color: rgb(211, 237, 105);">
+    <div class="Question" >
+        <h3>Frequently Asked Questions</h3>
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        How do I book your vehicles?  
+                        
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        To book a vehicle on our website, follow these simple steps:
+                        <!-- <video autoplay muted loop id="background-video">
+                          <source src="{% static 'images/local.mp4' %}"  type="video/mp4" style="height: 100vh; width: 50px;">
+                          Your browser does not support the video tag.
+                      </video> -->
+                      <img src="{% static 'images/ser.png' %}" alt="">
+                        <br>
+                        1. Select Date and Time.
+                        <br>
+                        2. Choose Vehicle Type.
+                        <br>
+                        3. Provide Personal Information.
+                        <br>
+                        4. Confirm Booking.
+                        <br>
+                        5. Payment (if applicable).<br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        What services do you offer?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        We offer a variety of  vehicle rental services tailored to suit different needs:
+                        <img src="{% static 'images/t.png' %}" alt="">
+                        <br><br>
+                        1. Local Rides.
+                        <br>
+                        2. Outstation Trips.
+                        <br>
+                        3. Airport Transfers.
+                        <br>
+                        4. Luxury Car Rentals.
+                        <br>
+                        5. Corporate Rentals.
+                        <br>
+                        6. Self-Drive Options.
+                        <br>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                        aria-controls="flush-collapseThree">
+                        How much does it cost to rent a vehicles?
+
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        The cost of renting a vehicle depends on several factors, including.
+                        <img src="{% static 'images/a.png' %}" alt="">
+                        <br><br>
+                        1. Type of Vehicle.
+                        <br>
+                        2. Duration of Rental.
+                        <br>
+                        3. Distance Travelled.
+                        <br>
+                        4. Additional Services.
+                        <br>
+                        5. Fuel policy.
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                        aria-controls="flush-collapseFour">
+                        How do I contact the customer support?
+                    </button>
+                  
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        You can contact our customer support team through the following methods:
+                        <img src="{% static 'images/c.png' %}" alt="">
+                        <br>
+                        
+                        Phone: Call our 24/7 customer service hotline at [insert phone number].
+                        <br>
+                        Email: Reach us at [insert email address] for any queries or support.
+                        <br>
+                        Live Chat: Visit our website and use the live chat feature to get immediate assistance from
+                        a representative.
+                        <br>
+                        Mobile App: If you have our app, you can use the "Help" or "Support" section to chat with
+                        our support team.
+                        <br>
+                        Social Media: You can also contact us through our official social media channels on
+                        platforms like Facebook, Twitter, or Instagram.
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                        aria-controls="flush-collapseFive">
+                        Are there any hidden fees?
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <img src="{% static 'images/h.png' %}" alt="">
+                    <div class="accordion-body">No, we believe in transparency and do not include any hidden fees.
+                        The price you see during booking includes all applicable charges such as taxes, insurance,
+                        and any other mandatory fees. However, optional extras like GPS, child seats, or additional
+                        insurance coverage, as well as costs related to fuel or tolls, may incur additional charges
+                        if you choose to add them.
+                        <br>
+                        We clearly outline all costs before you complete your booking, so there are no surprises!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+          
+                            <!-- Horizontal line before social icons -->
+                        <hr class="line">
+                            
+                              <!-- Horizontal line after social icons -->
+                              <div class="contact-container" data-aos="fade-down"
+                              data-aos-easing="linear"
+                              data-aos-duration="1500">
+                                <form action="{% url 'index' %}#contactform"id="contactform" method="post" class="contact-left">
+                                     {% csrf_token %}
+                                   <div class="contact-left-title" >
+                                    <h2>Get in touch</h2>
+                                    <hr>
+                                   </div>
+                                   <input type="text" name="name" id="" placeholder="Your name" class="contact-input" required>
+                                   <input type="email" name="email" id="" placeholder="Your email" class="contact-input" required>
+                                   <input required="" placeholder="Phone Number" type="tel" class="contact-input" name="phone"id="phone">
+                                   <textarea name="message" id="" placeholder="Message" class="contact-input" required></textarea>
+                                   <button type="submit">Submit <img src="{% static 'images/arrow.png' %}" style="width: 20px;" alt=""></button>
+                                  </form>
+                                 
+                                <div class="contact-right">
+                                  <img src="{% static 'images/get.png' %}" alt="">
+                                </div>
+                              </div>
+                              <div id="contact" style="background-color: rgb(245, 201, 120);">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="contact-left">
+                                            <h1 class="sub-title text-bolder" style="color: #c54b04; ">Contact Me</h1>
+                                            <p style="color: #451908;">If you have any questions, suggestions, feel free to contact us via the form or through any of the social media platforms below. We are always happy to connect and assist!</p>
+                                          
+                                          
+                                          <div class="contact-info">
+                                            <div class="contact-info-item">
+                                              <div class="contact-info-icon">
+                                                <i class="fas fa-home"></i>
+                                              </div>
+                                              
+                                              <div class="contact-info-content">
+                                                <a href="https://maps.app.goo.gl/KXQ2RyCRa2iXqGie6"><button class=" btn btn-auth">Address</button></a>
+                                                <p> <br/></p>
+                                              </div>
+                                            </div>
+                                            
+                                            <div class="contact-info-item">
+                                              <div class="contact-info-icon">
+                                                <i class="fas fa-phone"></i>
+                                              </div>
+                                              
+                                              <div class="contact-info-content">
+                                                <a href="tel:9849005710" target="_blank"><button class="btn btn-auth">Phone</button></a>
+                                                <p></p>
+                                              </div>
+                                            </div>
+                                            
+                                            <div class="contact-info-item">
+                                              <div class="contact-info-icon">
+                                                <i class="fas fa-envelope"></i>
+                                              </div>
+                                              
+                                              <div class="contact-info-content">
+                                                <a href="mailto:dahalrushma38@gmail.com" target="_blank"><button class="btn btn-auth">Email</button></a>
+                                               <p></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        
+                                          
+                                   <div class="col-md-12 padding_0">
+                                      <div class="map-responsive" >
+                                         <h1 style="color: rgb(84, 3, 3); font-size: 50px;" class="text-center"><b>OUR LOCATION</b></h1>
+                                             
+                       
+                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66780131877!2d85.41424997525222!3d27.665747876206467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b13b0f02b65%3A0xda6f887939344f29!2sChundevi%20Sallaghari%20Traffic%20Office!5e0!3m2!1sen!2snp!4v1739093276458!5m2!1sen!2snp"
+                           
+                                         width="600px" height="620px"
+                                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <!-- <img src="{% static 'images/th.png' %}" width="500px" alt=""> -->
+                                        </div>
+                                      </div>
+                                        
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+           <!-- contact sec end -->
+{% endblock content %}
+
+ 
+  

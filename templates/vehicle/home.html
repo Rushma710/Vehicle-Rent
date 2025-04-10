@@ -1,0 +1,103 @@
+{% extends "base1.html" %}
+
+{% block title %}
+  ~Home
+{% endblock title %}
+
+{% block content1 %}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<h1 class="text-center alert alert-success">You Can Insert Here</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mx-auto alert alert-success">
+          
+            <td>
+                <a href="{% url 'clear_items' %}">
+                    <button class="btn btn-success">
+                        <i class="fa-solid fa-eraser"></i> Clear
+                    </button>
+                </a>
+            </td>
+
+            <!-- Table -->
+            <table class="table table-success table-striped" id="myTable">
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Vehicle Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Descriptions</th>
+                        <th>Images</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ i.name }}</td>
+                            <td>{{ i.age }}</td>
+                            <td>{{ i.email }}</td>
+                            <td>{{ i.vehicle }}</td>
+                            <td>{{ i.category }}</td>
+                            <td>{{ i.descriptions }}</td>
+                            <td>
+                                {% if i.image %}
+                                    <img src="{{ i.image.url }}" height="100px" width="100px" alt="">
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                <a href="{% url 'edit' i.id %}">
+                                    <button class="btn btn-primary">
+                                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                                    </button>
+                                </a>
+                                <a href="{% url 'delete_data' i.id %}">
+                                    <button class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i> Delete
+                                    </button>
+                                </a>
+                                <a href="/payment/">
+                                    <button class="btn btn-warning">
+                                        <i class="fa-solid fa-pen"></i> Book Now
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if data|length < 1 %}
+                <h1 class="text-center text-success">Data not found</h1>
+            {% endif %}
+        </div>
+
+        <a href="/recycle/">
+            <button class="btn btn-warning">
+                <i class="fa-solid fa-recycle"></i> Recycle
+            </button>
+        </a>
+    </div>
+</div>
+
+<script>
+    // Initialize DataTable with some customization
+    let table = new DataTable('#myTable', {
+        paging: true,
+        searching: true,
+        ordering: true,
+        pageLength: 10  // Adjust number of rows per page if necessary
+    });
+</script>
+
+{% endblock content1 %}
